@@ -5,6 +5,9 @@ class ProfileHeader extends Component {
   render() {
     const { profile } = this.props;
     console.log(profile)
+    if(profile.website.split('.')[0] === 'www'){
+      profile.website = 'http://'+profile.website;
+    } 
     return (
       <div className="row">
         <div className="col-md-12">
@@ -32,7 +35,6 @@ class ProfileHeader extends Component {
                   <a
                     className="text-white p-2"
                     href={profile.website}
-                    target="_blank"
                   >
                     <i className="fas fa-globe fa-2x" />
                   </a>
