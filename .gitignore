@@ -22,3 +22,4 @@ yarn-error.log*
 
 /config/keys_dev.js
 package-lock.json
+.env
